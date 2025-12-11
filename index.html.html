@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ với chúng tôi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* Tông màu tím xanh giống ảnh mẫu */
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --accent-color: #007bff; /* Màu icon */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: var(--text-color);
+        }
+
+        /* --- HEADER --- */
+        .header-title {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header-title h1 { font-size: 32px; font-weight: 700; margin-bottom: 10px; }
+        .header-title p { font-size: 16px; opacity: 0.9; font-weight: 400; }
+
+        /* --- CONTAINER CHÍNH (Chia 2 cột) --- */
+        .main-container {
+            display: flex;
+            gap: 30px;
+            width: 100%;
+            max-width: 900px;
+            flex-wrap: wrap; /* Tự xuống dòng trên điện thoại */
+        }
+
+        /* --- CẤU TRÚC THẺ CHUNG --- */
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            flex: 1; /* Chia đều không gian */
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            color: #444;
+        }
+
+        /* --- CỘT TRÁI: QR CODE --- */
+        .qr-frame {
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .qr-img {
+            width: 100%;
+            max-width: 250px; /* Kích thước mã QR */
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .qr-note { font-size: 14px; color: #666; margin-top: 10px; }
+
+        /* --- CỘT PHẢI: LIÊN HỆ --- */
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-box {
+            display: flex;
+            align-items: center;
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-align: left;
+        }
+
+        .contact-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            background: #fff;
+            border: 1px solid #eee;
+        }
+
+        /* Icon tròn */
+        .icon-circle {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #fff;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        /* Màu riêng cho từng icon */
+        .fb-bg { background-color: #1877f2; }
+        .mail-bg { background-color: #00b894; }
+        .tele-bg { background-color: #2980b9; }
+        .phone-bg { background-color: #0984e3; }
+
+        .info h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .info span {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            word-break: break-all; /* Xuống dòng nếu mail quá dài */
+        }
+
+        /* --- FOOTER ICON --- */
+        .footer-socials {
+            margin-top: 40px;
+            display: flex;
+            gap: 15px;
+        }
+        .social-btn {
+            width: 40px; height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center; justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        .social-btn:hover { background: rgba(255,255,255,0.4); }
+
+        /* Responsive cho điện thoại */
+        @media (max-width: 768px) {
+            .main-container { flex-direction: column; }
+            .header-title h1 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-title">
+        <h1>Liên hệ với chúng tôi</h1>
+        <p>Hãy kết nối với Bùi Văn Hòa qua các kênh liên lạc dưới đây</p>
+    </div>
+
+    <div class="main-container">
+        
+        <div class="card">
+            <h3 class="section-title">DỰ ÁN NUÔI TÔI</h3>
+            <div class="qr-frame">
+                <img src="https://img.vietqr.io/image/VIETCOMBANK-1022661262-compact2.png?amount=&addInfo=&accountName=BUI%20VAN%20HOA" 
+                     alt="Mã QR VietQR" class="qr-img">
+            </div>
+            <p class="qr-note">Quét mã QR là em hiện hình luôn!</p>
+        </div>
+
+        <div class="card">
+            <h3 class="section-title">Thông tin liên hệ</h3>
+            <div class="contact-list">
+                
+                <a href="https://www.facebook.com/profile.php?id=61581047491375" target="_blank" class="contact-box">
+                    <div class="icon-circle fb-bg"><i class="fab fa-facebook-f"></i></div>
+                    <div class="info">
+                        <h4>Facebook</h4>
+                        <span>Bùi Văn Hòa</span>
+                    </div>
+                </a>
+
+                <a href="mailto:buivanhoa204@gmail.com" class="contact-box">
+                    <div class="icon-circle mail-bg"><i class="fas fa-envelope"></i></div>
+                    <div class="info">
+                        <h4>Email</h4>
+                        <span>buivanhoa204@gmail.com</span>
+                    </div>
+                </a>
+
+                <a href="https://t.me/@Buihoa18nd" target="_blank" class="contact-box">
+                    <div class="icon-circle tele-bg"><i class="fab fa-telegram-plane"></i></div>
+                    <div class="info">
+                        <h4>Telegram</h4>
+                        <span>@Buihoa18nd</span>
+                    </div>
+                </a>
+
+                <a href="tel:0349684069" class="contact-box">
+                    <div class="icon-circle zalo-bg"><i class="fas fa-phone-alt"></i></div>
+                    <div class="info">
+                        <h4>ZALO</h4>
+                        <span>0349684069</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-socials">
+        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-btn"><i class="fab fa-telegram-plane"></i></a>
+        <a href="#" class="social-btn"><i class="fas fa-envelope"></i></a>
+        <a href="#" class="social-btn"><i class="fas fa-phone"></i></a>
+    </div>
+
+</body>
+</html>
